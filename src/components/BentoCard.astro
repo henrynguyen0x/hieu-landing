@@ -61,7 +61,7 @@ const {
 
     {tags?.length ? (
       <div class="mt-6 pt-4 border-t border-neutral-100 flex flex-wrap gap-2">
-        {tags.map((tag) => (
+        {tags.map((tag: string) => (
           <span class="rounded-full border border-neutral-200 bg-neutral-50 px-2.5 py-0.5 text-xs font-medium text-neutral-600">{tag}</span>
         ))}
       </div>
