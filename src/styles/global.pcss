@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+
+/* //this is the site background//
+   Placeholder: set your custom background image here later.
+   Example:
+   body { background-image: url('/bg.jpg'); background-size: cover; background-attachment: fixed; }
+*/
+
+:root {
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* Subtle minimal texture (optional; remove if you want pure white) */
+.bg-grid {
+  background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: -8px -8px;
+}
+
+/* ===== Spotlight modal ===== */
+html.modal-lock {
+  overflow: hidden;
+}
+
+/* The modal card container (centered) */
+#spotlightModal {
+  transform: translate(-50%, -50%) scale(0.98);
+  opacity: 0;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+#spotlightModal[data-open="true"] {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+#spotlightOverlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+#spotlightOverlay[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal smooth zoom */
+#spotlightModal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.96);
+  pointer-events: none;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+#spotlightModal[data-open="true"] {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #spotlightOverlay, #spotlightModal {
+    transition: none;
+  }
+}
+[data-card-clone] ul {
+  margin-top: 0.25rem;
+}
+[data-card-clone] li {
+  margin-top: 0.4rem;
+}
+[data-bento-card] a[aria-label="Open external link"] {
+  position: relative;
+}
+[data-bento-card] a[aria-label="Open external link"]::after {
+  content: "See more";
+  position: absolute;
+  bottom: -1.8rem;
+  right: 0;
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+[data-bento-card] a[aria-label="Open external link"]:hover::after {
+  opacity: 1;
+}
+#spotlightModal [data-card-clone] > .mt-5 {
+  max-width: 78ch;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* CV button: static rainbow ring + moving accent (no full-ring spin) */
+.cv-button {
+  position: relative;
+  display: inline-flex;
+  border-radius: 9999px;
+  padding: 2px;            /* ring thickness */
+  background: transparent;
+}
+
+/* static base ring (subtle) */
+.cv-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+
+  background: conic-gradient(
+    #fff845,
+    #1cc98c,
+    #24cbde,
+    #57a9f7,
+    #bd52f9,
+    #ebb347,
+    #fff845
+  );
+
+  /* ring-only mask */
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0.55;           /* keep it minimal */
+  pointer-events: none;
+}
+
+/* moving accent tracer (a small arc that travels around) */
+.cv-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+
+  /* same colors, but this layer will be "windowed" */
+  background: conic-gradient(
+    #fff845,
+    #1cc98c,
+    #24cbde,
+    #57a9f7,
+    #bd52f9,
+    #ebb347,
+    #fff845
+  );
+
+  /* 1) ring-only mask (same as base) */
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  /* 2) plus an extra moving "window" mask: a small visible arc */
+  /* We apply it via mask-image layering */
+  -webkit-mask-image:
+    /* ring mask */
+    linear-gradient(#000 0 0),
+    /* window mask: opaque arc between 0-12%, rest transparent */
+    conic-gradient(from 0deg, #000 0 12%, transparent 12% 100%);
+  -webkit-mask-composite: source-in; /* intersect the two masks */
+  mask-composite: intersect;
+
+  filter: saturate(1.1);
+  opacity: 0.95;
+  animation: cv-tracer 2.8s linear infinite;
+  pointer-events: none;
+}
+
+/* Static rainbow accent border */
+.rainbow-btn {
+  position: relative;
+  border-radius: 9999px;
+  background: white;
+}
+
+.rainbow-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  padding: 2px; /* border thickness */
+
+  background: conic-gradient(
+    #ff2d55,
+    #ff9500,
+    #ffd60a,
+    #34c759,
+    #0a84ff,
+    #5e5ce6,
+    #bf5af2,
+    #ff2d55
+  );
+
+  /* mask out the center so only the stroke shows */
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+/* Tooltip */
+.tt {
+  position: relative;
+  display: inline;
+  border-bottom: 1px dotted rgba(0,0,0,0.35);
+  cursor: help;
+}
+
+.tt::after {
+  content: attr(data-tt);
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 8px);
+  max-width: 320px;
+
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(15, 15, 15, 0.92);
+  color: white;
+  font-size: 12px;
+  line-height: 1.35;
+  white-space: normal;
+
+  opacity: 0;
+  transform: translateY(2px);
+  transition: opacity 140ms ease, transform 140ms ease;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.tt:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Small arrow */
+.tt::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  bottom: calc(100% + 2px);
+  border: 6px solid transparent;
+  border-top-color: rgba(15, 15, 15, 0.92);
+  opacity: 0;
+  transition: opacity 140ms ease;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.tt:hover::before {
+  opacity: 1;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tt::after, .tt::before {
+    transition: none;
+  }
+}
+body {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="%23000000" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+  height: 100vh;
+}
+
+a {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" stroke="%23000000" fill="%23000000" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+}

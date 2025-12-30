@@ -1,0 +1,444 @@
+---
+import "../styles/global.pcss";
+import BentoCard from "../components/BentoCard.astro";
+const LINKEDIN = "https://www.linkedin.com/in/vhieunguyen/";
+const CV_URL = "https://drive.google.com/file/d/1SNrjjm_RBhePN5p9dAtQrp4Bx7WpwW-S/view"; 
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "utbt4inp5o");
+</script>
+    <script src="https://t.contentsquare.net/uxa/4e759a5df160d.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hieu Nguyen — Product Manager | AI, B2B SaaS</title>
+    <meta
+      name="description"
+      content="Product builder in AI & B2B SaaS. $10M+ product revenue. Experience across Onclusive/Critical Mention, LexisNexis, VietnamWorks, SEA Group, VNG."
+    />
+
+    <!-- Striking fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-display: "Space Grotesk", ui-sans-serif, system-ui;
+        --font-body: "Inter", ui-sans-serif, system-ui;
+      }
+      .font-display { font-family: var(--font-display); }
+      .font-body { font-family: var(--font-body); }
+    </style>
+  </head>
+
+  <body class="bg-white text-neutral-900 font-body">
+    <!-- Top bar -->
+    <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-neutral-100">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#top" class="font-display font-semibold tracking-tight text-lg">
+          Hieu Nguyen
+        </a>
+        <!-- <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-600">
+          <a class="hover:text-neutral-900" href="#work">Work</a>
+          <a class="hover:text-neutral-900" href="#wins">Wins</a>
+          <a class="hover:text-neutral-900" href="#about">About</a>
+        </nav> -->
+       <div class="flex items-center gap-3">
+  <!-- Download CV -->
+  <a
+  href={CV_URL}
+  target="_blank"
+  rel="noreferrer"
+   class="rainbow-btn inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium
+         bg-white text-neutral-900 hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)]"
+>
+  Download my CV
+</a>
+
+  <!-- Contact -->
+  <a
+    href={LINKEDIN}
+    target="_blank"
+    rel="noreferrer"
+    class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium
+           bg-neutral-900 text-white hover:bg-neutral-800"
+  >
+    Contact me <span aria-hidden="true">→</span>
+  </a>
+</div>
+      </div>
+    </header>
+
+    <main id="top" class="bg-grid">
+      <!-- Hero -->
+      <section class="max-w-6xl mx-auto px-4 pt-10 pb-8">
+        <div class="grid lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-7">
+            <p class="text-sm text-neutral-600">
+              👷‍♂️Product Manager • 💻AI & B2B SaaS • 📍Cambridge, UK
+            </p>
+            <h1 class="mt-3 font-display text-4xl md:text-6xl font-semibold tracking-tight leading-[1.02]">
+              Self-starter product builder.
+              <span class="text-neutral-500"> Turns messy problems into shipped outcomes.</span>
+            </h1>
+            <p class="mt-5 text-lg text-neutral-700 leading-relaxed max-w-2xl">
+              Built and scaled products across AI, legal tech, HR tech, and platforms.
+              Delivered <span class="font-semibold text-neutral-900">$10M+ in  yearly product revenue</span> and shipped ML/LLM features in regulated markets.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#work"
+                class="rounded-full px-5 py-2.5 bg-white border border-neutral-200 shadow-[var(--shadow-soft)] hover:border-neutral-300"
+              >
+                <span class="text-sm font-medium">My experience</span>
+              </a>
+              <a
+                href={LINKEDIN}
+                target="_blank"
+                rel="noreferrer"
+                class="rounded-full px-5 py-2.5 bg-neutral-900 text-white hover:bg-neutral-800"
+              >
+                <span class="text-sm font-medium">Contact me</span>
+              </a>
+            </div>
+
+            <!-- <p class="mt-6 text-sm text-neutral-600">
+             • Email: vanhieunguyen.vn@gmail.com 
+            </p> -->
+          </div>
+
+          <!-- Hero bento -->
+<div class="lg:col-span-5 grid grid-cols-1 gap-4">
+  <BentoCard
+    title="Career Highlights"
+    subtitle="Achivements in numbers"
+    class="col-span-1"
+    tags={["B2B SaaS", "AI products", "Growth"]}
+  >
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div>
+        <p class="font-display text-3xl font-semibold">$10M+</p>
+        <p class="text-sm text-neutral-600 mt-1">Product revenue (Navigos))</p>
+      </div>
+      <div>
+        <p class="font-display text-3xl font-semibold">80+</p>
+        <p class="text-sm text-neutral-600 mt-1">Countries reached (CVTailor)</p>
+      </div>
+      <div>
+        <p class="font-display text-3xl font-semibold">10M+</p>
+        <p class="text-sm text-neutral-600 mt-1">MAU milestone (Zalo)</p>
+      </div>
+    </div>
+  </BentoCard>
+
+  <BentoCard
+    title="Now"
+    subtitle="Onclusive / Critical Mention (Feb 2025 – Present)"
+    href="https://www.criticalmention.com/"
+    tags={["Rebrand", "Tracking", "UX reporting", "LLM"]}
+  >
+    <ul class="space-y-2 text-sm text-neutral-700 leading-relaxed">
+      <li>• Develop Critical Mention, the fastest-growing product within Onclusive’s ecosystem.</li>
+      <li>• Delivered a rebranding project in the first 60 days.</li>
+      <li>• Implemented a new usage tracking + data gathering system to constantly collect users’ feedback.</li>
+      <li>• Run the only Product–UX monthly report, bringing tracking insights to improve design quality and support leadership decisions.</li>
+      <li>• Sole conductor of user surveys, online interviews, and other UX research.</li>
+      <li>• Lead infrastructure migration, LLM, and rebrand projects; mentor a junior Product Manager.</li>
+    </ul>
+  </BentoCard>
+
+  <BentoCard
+    title="Founder"
+    subtitle="CVTailor.info (Feb 2024 – Dec 2025)"
+    href="https://www.cvtailor.info/"
+    tags={["LLM", "0→1", "User research"]}
+  >
+    <ul class="space-y-2 text-sm text-neutral-700 leading-relaxed">
+      <li>• Developed and managed the entire product lifecycle from ideation to launch (50+ user interviews).</li>
+      <li>• Leveraged LLM recommendations with advanced prompts + customised training data.</li>
+      <li>• Reached users from 80+ countries, with 70+ active users after 2 months (no marketing).</li>
+      <li>• Provided free CV review services to nearly 100 people from 10 different countries in less than 6 months.</li>
+    </ul>
+  </BentoCard>
+</div>
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section id="work" class="max-w-6xl mx-auto px-4 py-10">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Work experience</h2>
+        <p class="mt-2 text-neutral-600 max-w-2xl">
+          Roles and impact highlights — measurable outcomes, shipped systems, and scaled products.
+        </p>
+
+      <div class="mt-8 grid lg:grid-cols-12 gap-4">
+          <BentoCard
+            title="LexisNexis (RELX) — Product Manager"
+            subtitle="Oct 2022 – Feb 2024 • London"
+            class="lg:col-span-6  "
+            href="https://www.lexisnexis.com/en-ca/products/lexis-create-plus"
+            tags={["NLP", "Office 365", "Regulated", "Global teams"]}
+          >
+           <ul class="space-y-2 text-sm text-neutral-700 leading-relaxed">
+  <li>• Integrated advanced ML features into LexisNexis’s legal database, enhancing NLP search within Microsoft Office 365 in regulated/GDPR markets.</li>
+  <li>• Led global development projects with cross-functional teams across the US, UK, and Canada (workflow enhancement, doc processing/management, proofreading, recommendations).</li>
+  <li>• Coordinated marketing, sales, and technical teams across time zones to deliver launches on time and within budget.</li>
+  <li>• Optimized workflow + decision-making processes, reducing development timelines by ~30%.</li>
+  <li>• Improved legal document proofreading accuracy/efficiency by 50%+ for 120+ law clients using in-house ML models.</li>
+</ul>
+          </BentoCard>
+
+          <BentoCard
+            title="VietnamWorks — Product Manager"
+            subtitle="Jul 2019 – Aug 2022 • Ho Chi Minh City"
+            class="lg:col-span-6"
+            href="https://www.vietnamworks.com/"
+            tags={["Recruitment Tech", "Growth", "A/B testing", "SaaS", "HR tech", "Scrum"]}
+          >
+            <ul class="space-y-2 text-sm text-neutral-700 leading-relaxed">
+  <li>• Delivered multiple roadmaps (HRIS, job board, ATS) and provided product vision/strategy guidance to the Board.</li>
+  <li>• Used SQL + Python, tracking, A/B testing, and qualitative research to drive decisions; contributed to #1 job search app in Vietnam (2020).</li>
+  <li>• Built new services surpassing revenue forecasts by ~80%, accounting for <span class="tt font-semibold" data-tt="With one single product package.">~30% annual revenue (~$7M+).</span></li>
+  <li>• Partnered with marketing to execute campaigns delivering 100%+ ROI.</li>
+  <li>• Recruited and led associates/interns on Product Management and Machine learning initiatives, reducing operational costs by 20%+ annually; replaced a $50k/year vendor with in-house NLP systems.</li>
+</ul>
+          </BentoCard>
+
+          <BentoCard
+            title="SEA Group - Product Manager"
+            subtitle="May 2018 – Feb 2019 • Ho Chi Minh City"
+            class="lg:col-span-7 "
+            href="https://ocha.in.th/en/about"
+            tags={["Discovery", "Automation", "Ops efficiency","SaaS"]}
+          >
+           <ul class="space-y-2 text-sm text-neutral-700 leading-relaxed">
+  <li>• Ran user research using SQL/data modeling/tracking; 10+ user interviews/week for discovery + usability testing.</li>
+  <li>• Managed optimization + marketing strategies that drove leading app store positions and top-3 MAU among F&B business apps in Vietnam.</li>
+  <li>• Automated business analytics/reporting → 50% reduction in operational costs.</li>
+  <li>• Improved support processes → 50%+ reduction in resolution time.</li>
+  <li>• Built automation/process improvements boosting sales productivity by 70% for 2000+ salespeople.</li>
+</ul>
+          </BentoCard>
+
+          <BentoCard
+            title="VNG — Zalo Group (Product Owner)"
+            subtitle="Oct 2016 – May 2018 • Ho Chi Minh City"
+            class="lg:col-span-5"
+            href="https://oa.zalo.me/home"
+            tags={["OTT Platform", "Growth", "Subscriptions","CRM"]}
+          >
+            <ul class="space-y-2 text-sm text-neutral-700 leading-relaxed">
+              <li>• Launched Zalo Business Platform with cross-functional teams.</li>
+              <li>• Grew Zalo Official Accounts to <span class="tt font-semibold" data-tt="Across multiple Official Accounts in partnership with EVN, FE Credit, Lazada.">10M+</span> monthly active users.</li>
+              <li>• Doubled traffic and revenue for ZingMP3 VIP subscriptions in 3 months.</li>
+            </ul>
+          </BentoCard>
+        </div>
+      </section>
+
+      <!-- Wins -->
+      <section id="wins" class="max-w-6xl mx-auto px-4 pb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Awards and Certifications</h2>
+        <div class="mt-8 grid lg:grid-cols-12 gap-4">
+          <BentoCard
+            title="Honors & awards"
+            subtitle="Awards from organisations and competitions"
+            class="lg:col-span-6"
+            tags={["MMA Smarties", "LexisNexis", "Navigos"]}
+          >
+            <ul class="space-y-3 text-sm text-neutral-700 leading-relaxed">
+              <li>• Gold — MMA Smarties Vietnam (2017): Best CRM Solution (with FE Credit Vietnam)</li>
+              <li>• Bronze — MMA Smarties APAC (2017): Best CRM Solution (with FE Credit Vietnam)</li>
+              <li>• Product Excellent Award — LexisNexis UK (2023): Lexis Create release + improvements.<a href="https://www.linkedin.com/posts/vhieunguyen_lexisnexis-award-productexcellence-activity-7129785229438771201-DOsS" target="_blank" rel="noreferrer" aria-label="View post" class="ml-1 inline-flex items-center rounded border border-neutral-200 bg-white px-2 py-0.5 text-xs font-medium text-neutral-600 hover:border-neutral-300 hover:text-neutral-900"><span aria-hidden="true">→</span></a></li>
+              <li>• Service Hero Award — Navigos Group (2021): training + strengthening consultants’ tech knowledge <a href="https://www.linkedin.com/posts/vhieunguyen_awards-success-sharingisthenewlearning-activity-6882150325315350528-5AD8" target="_blank" rel="noreferrer" aria-label="View post" class="ml-1 inline-flex items-center rounded border border-neutral-200 bg-white px-2 py-0.5 text-xs font-medium text-neutral-600 hover:border-neutral-300 hover:text-neutral-900"><span aria-hidden="true">→</span></a></li>
+            </ul>
+          </BentoCard>
+
+          <BentoCard
+            title="Certifications"
+            subtitle="Education in various fields"
+            class="lg:col-span-6"
+            tags={["OpenAI", "LLMOps", "Scrum"]}
+          >
+            <ul class="space-y-3 text-sm text-neutral-700 leading-relaxed">
+              <li>• Building AI Products with OpenAI — Uplimit (2024)</li>
+              <li>• LLMOps: Building Real-World LLM Apps — Udacity & Comet (2024)</li>
+              <li>• PSPO II — Scrum.org (2020)</li>
+              <li>• Data Analysis with Python — Nordic Coder (2019)</li>
+            </ul>
+          </BentoCard>
+        </div>
+      </section>
+
+      <!-- About / Education -->
+        <section id="about" class="max-w-6xl mx-auto px-4 pb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">About me</h2>
+        <div class="mt-8 grid lg:grid-cols-12 gap-4">
+          <BentoCard
+            title="How I work"
+            subtitle="Principles"
+            class="lg:col-span-7"
+            tags={["Discovery", "Data", "Execution"]}
+          >
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              • Tight feedback loops: talk to users, inspect data, form a hypothesis, test, ship, repeat.
+              • Data oriented: champion tracking tools and data, only work with real user feedback, fully data-aware decision making.
+              I optimise for clarity, speed, and outcomes that survive contact with reality.
+            </p>
+          </BentoCard>
+
+          <BentoCard
+            title="Education"
+            subtitle="Education background"
+            class="lg:col-span-5"
+            tags={["UEA", "Kent"]}
+          >
+            <ul class="space-y-3 text-sm text-neutral-700 leading-relaxed">
+              <li>• MSc Economics of Intl. Finance and Trade — University of East Anglia (2014–2015)</li>
+              <li>• BSc Economics — University of Kent (2011–2014) • Co-founder of Vietnamese Society</li>
+            </ul>
+          </BentoCard>
+        </div>
+      </section>
+
+       <!-- Other/Misc -->
+        <section id="other" class="max-w-6xl mx-auto px-4 pb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">Other experience</h2>
+        <div class="mt-8 grid lg:grid-cols-12 gap-4">
+          <BentoCard
+            title="Volunteering and Other experience"
+            subtitle="Principles"
+            class="lg:col-span-12"
+            tags={["Mentoring", "Education", "Volunteering"]}
+          >
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              <li> Mentor/Guest Speaker - AIESEC - The A Program/PM Challenge 2022 & 2023</li>
+              <li> Mentor - Mentori - Mentor of the Year 2022</li>
+              <li> Course Contents Creator/Advisor for Product Management Course - MindX Technology 2022 & 2023</li>
+            </p>
+          </BentoCard>
+        </div>
+      </section>
+
+
+      <!-- Footer contact -->
+      <footer class="max-w-6xl mx-auto px-4 pb-16">
+        <div class="rounded-3xl border border-neutral-200 bg-white shadow-[var(--shadow-soft)] p-8 md:p-10">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div>
+              <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight">
+                Contact
+              </h2>
+              <p class="mt-3 text-neutral-700 max-w-2xl">
+                Best way to reach me: LinkedIn.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a
+                href={LINKEDIN}
+                target="_blank"
+                rel="noreferrer"
+                class="rounded-full px-5 py-2.5 bg-neutral-900 text-white hover:bg-neutral-800"
+              >
+                Contact me on LinkedIn →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-6 text-xs text-neutral-500 flex flex-wrap items-center justify-between gap-2">
+          <span>© {new Date().getFullYear()} Hieu Nguyen</span>
+          <span class="hidden sm:inline">Built with Astro</span>
+        </p>
+      </footer>
+    </main>
+
+    <!-- ===== Spotlight overlay + modal (one-time) ===== -->
+   <div id="spotlightOverlay" data-open="false"
+  class="fixed inset-0 bg-neutral-400/60 backdrop-blur-sm z-40"
+  aria-hidden="true"></div>
+
+  <div
+  id="spotlightModal"
+  data-open="false"
+  class="fixed left-1/2 top-1/2 z-50 w-[min(980px,94vw)] max-h-[84vh] overflow-auto rounded-3xl border border-neutral-200 bg-white shadow-[0_30px_80px_rgba(0,0,0,0.18)]"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Spotlight"
+>
+  <button
+    type="button"
+    id="spotlightClose"
+    class="absolute top-4 right-4 inline-flex items-center justify-center w-9 h-9 rounded-full border border-neutral-200 bg-white hover:bg-neutral-50"
+    aria-label="Close spotlight"
+  >
+    <span class="text-xl leading-none">×</span>
+  </button>
+
+  <div id="spotlightContent" class="p-6"></div>
+</div>
+    <script is:inline>
+      (() => {
+        const overlay = document.getElementById("spotlightOverlay");
+        const modal = document.getElementById("spotlightModal");
+        const closeBtn = document.getElementById("spotlightClose");
+        const content = document.getElementById("spotlightContent");
+        const titleEl = document.getElementById("spotlightTitle");
+
+       const open = (card) => {
+  const cloneSrc = card.querySelector("[data-card-clone]");
+  if (!cloneSrc) return;
+
+  // Clone the whole visible card content
+  const clone = cloneSrc.cloneNode(true);
+
+  // Remove any elements we don't want inside the modal (expand button etc.)
+  clone.querySelectorAll("[data-no-spotlight]").forEach((el) => el.remove());
+
+  content.innerHTML = "";
+  content.appendChild(clone);
+
+  overlay.setAttribute("data-open", "true");
+  modal.setAttribute("data-open", "true");
+  document.documentElement.classList.add("modal-lock");
+};
+const close = () => {
+  modal.setAttribute("data-open", "false");
+  overlay.setAttribute("data-open", "false");
+  content.innerHTML = "";
+  document.documentElement.classList.remove("modal-lock");
+};
+        // close actions
+        overlay.addEventListener("click", close);
+        closeBtn.addEventListener("click", close);
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && !modal.classList.contains("hidden")) close();
+        });
+
+        // expand button delegation
+        document.addEventListener("click", (e) => {
+          const btn = e.target.closest("[data-expand]");
+          if (!btn) return;
+
+          const card = btn.closest("[data-bento-card]");
+          if (!card) return;
+
+          e.preventDefault();
+          e.stopPropagation();
+          open(card);
+        });
+      })();
+    </script>
+  </body>
+</html>
