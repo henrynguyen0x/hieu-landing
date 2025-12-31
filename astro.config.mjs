@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   output: "static",
   site: "https://henrynguyen0x.github.io",
-  base: "/Portfolio", // MUST match your GitHub repo name exactly
+  base: "/Portfolio",
 
   vite: {
     plugins: [tailwindcss()],
