@@ -17,6 +17,15 @@ const CV_URL = "https://drive.google.com/file/d/1hq4QMrfYSi8CQQi9Co4d6ndiha63Uvh
 
   gtag('config', 'G-5M1L4509B0');
 </script>
+<script>
+  document.addEventListener('astro:page-load', () => {
+    gtag('event', 'page_view', {
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+      page_title: document.title,
+    });
+  });
+</script>
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
